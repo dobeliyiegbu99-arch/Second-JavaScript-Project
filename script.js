@@ -16,28 +16,31 @@ console.log(isPrime(5));
 
 } */
 
-debugger
+// debugger
 // Password Strength meter
 var password = 0
 function passwordMeter(password) {
-    if (password.length >= 6){
-        return "Weak";
-    } else
-    if (password.length >= 10){
-        return "Medium";
-    } else
-    if (password.length >= 15){
-        return "Strong";
-    } else 
     if (password.length >= 20){
         return "Very Strong";
     } else
 
-    return "Very Weak";
-    
+    if (password.length >= 15){
+        return "Strong";
+    } else
+
+    if (password.length >= 10){
+        return "Medium";
+    } else
+
+    if (password.length >= 6){
+        return "Weak";
+    } else {
+
+        return "Very Weak";
+    }
 }
 
-console.log(passwordMeter("Lightning"));
+console.log(passwordMeter("Lightnight"));
  
 // x and o 
 
