@@ -20,17 +20,17 @@ debugger
 // Password Strength meter
 var password = 0
 function passwordMeter(password) {
-    if (password.length >= 20){
-        return "Very Strong";
-    } else
-    if (password.length >= 15){
-        return "Strong";
+    if (password.length >= 6){
+        return "Weak";
     } else
     if (password.length >= 10){
         return "Medium";
+    } else
+    if (password.length >= 15){
+        return "Strong";
     } else 
-    if (password.length >= 6){
-        return "Weak";
+    if (password.length >= 20){
+        return "Very Strong";
     } else
 
     return "Very Weak";
@@ -86,7 +86,7 @@ function xoGame(game) {
 
     return "loss"
 } */
-
+/*
 var countX = 0, countO = 0;
 function xoGame(game){
     switch(game){
@@ -109,4 +109,4 @@ function xoGame(game){
     if (countX != )
 } 
 // Password check
-// let password = console.log()
+// let password = console.log() */
