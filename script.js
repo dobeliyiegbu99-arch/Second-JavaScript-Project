@@ -41,6 +41,71 @@ function passwordMeter(password) {
 }
 
 console.log(passwordMeter("Lightnight"));
+
+
+// Grade Book Scores
+function studentScores(num) {
+    if (!Array.isArray(num) || num.length === 0) {
+        return "Error";
+    } else
+    
+    if (num < 0 || num > 100) {
+        return "Invalid";
+    }
+
+    // Mean
+
+    let total = 0;
+    
+    for (let n = 0; n < num.length; n++){
+        total += num [n];
+    }
+    let mean = total / num.length;
+
+    // Min and Max Scores
+    let min = Math.min(...num);
+    let max = Math.max(...num);
+
+    // Median
+    let sorted = [...num].sort((a, b) => a - b); 
+    let mid = Math.floor(sorted.length / 2);
+    let median;
+
+    if (sorted.length % 2 === 1) {
+        median = sorted[mid];
+    } else{
+        return "invalid" 
+    }
+
+    let grades;
+    if (mean >= 70) {
+        grades = "A";
+    } else 
+    if (mean >= 60) {
+        grades = "B";
+    } else
+    if (mean >= 50) {
+        grades = "C";
+    } else
+    if (mean >= 45) {
+        grades = "D";
+    } else {
+        grades = "F";
+    };
+
+    // Returns
+
+    return{
+        mean : mean,
+        min : min,
+        max : max,
+        median : median,
+        grades : grades
+    }
+}
+
+console.log(studentScores([78, 55, 92, 63, 81])); // Output: {    "mean": 73.8,    "min": 55,    "max": 92,    "median": 78,    "grades": "A"}
+console.log(studentScores([40, 49, 50, 50, 60])); // Output: {mean: 49.8, min: 40, max: 60, median: 50, grades: 'D'}
  
 // x and o 
 
